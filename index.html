@@ -1,58 +1,30 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#050307">
-  <meta name="description" content="WINE AI — More Than An AI. الموقع تحت التطوير.">
-  <title>WINE AI | الموقع تحت التطوير</title>
-  <style>
-    * { box-sizing: border-box; }
-    html, body {
-      margin: 0;
-      width: 100%;
-      min-height: 100%;
-      background: #050307;
-    }
-    body {
-      min-height: 100vh;
-      min-height: 100svh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow-x: hidden;
-    }
-    main {
-      width: 100%;
-      min-height: 100vh;
-      min-height: 100svh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .poster {
-      display: block;
-      width: 100%;
-      height: auto;
-      max-height: 100svh;
-      object-fit: contain;
-    }
-    @media (min-width: 700px) {
-      .poster {
-        width: auto;
-        height: 100svh;
-        max-width: 100%;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#050307">
+<meta name="description" content="WINE AI — More Than An AI. قريباً.">
+<title>WINE AI | قريباً</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#050307}
+body{min-height:100vh;min-height:100svh;font-family:system-ui,sans-serif}
+.screen{position:relative;width:100%;height:100vh;height:100svh;overflow:hidden;isolation:isolate;background:#050307}
+.poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;transform:scale(1.015);animation:posterMotion 18s ease-in-out infinite alternate;will-change:transform}
+.shade{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.10),transparent 25%,transparent 72%,rgba(0,0,0,.22))}
+.status{position:absolute;z-index:2;left:max(16px,env(safe-area-inset-left));bottom:max(18px,env(safe-area-inset-bottom));display:inline-flex;align-items:center;gap:9px;padding:9px 14px;color:rgba(255,255,255,.9);background:rgba(10,8,16,.68);border:1px solid rgba(255,255,255,.13);border-radius:999px;font-size:12px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.dot{width:9px;height:9px;flex:0 0 9px;border-radius:50%;background:#35e879;box-shadow:0 0 8px rgba(53,232,121,.85),0 0 18px rgba(53,232,121,.45);animation:blink 1.15s ease-in-out infinite}
+@keyframes posterMotion{from{transform:scale(1.015) translate3d(0,0,0)}to{transform:scale(1.105) translate3d(0,-.7%,0)}}
+@keyframes blink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.22;transform:scale(.78)}}
+@media(prefers-reduced-motion:reduce){.poster,.dot{animation:none}}
+</style>
 </head>
 <body>
-  <main>
-    <img
-      class="poster"
-      src="/wine-ai.png"
-      alt="WINE AI — الموقع تحت التطوير"
-    >
-  </main>
+<main class="screen" aria-label="WINE AI — الموقع تحت التطوير">
+<img class="poster" src="/wine-ai.png" alt="WINE AI — الموقع تحت التطوير">
+<div class="shade" aria-hidden="true"></div>
+<div class="status"><span class="dot" aria-hidden="true"></span><span>قيد التطوير</span></div>
+</main>
 </body>
 </html>
