@@ -1,11 +1,1 @@
-WINE AI — CSS ONLY Coming Soon
-
-لا توجد أي صورة خارجية أو ملف صورة في هذا المشروع.
-الشعار والخلفية والعناصر المتحركة كلها مرسومة باستخدام HTML وCSS.
-
-الملفات:
-- index.html
-- README.txt
-
-ارفع الملفين إلى جذر مستودع GitHub المرتبط بـ Vercel.
-لا يحتاج المشروع إلى صورة أو مجلد public أو src.
+WINE AI — Updated Coming Soon Page\n\nFiles:\n- index.html: page structure and Arabic/English content\n- style.css: all styling and animations\n\nTo use: upload all three files to the root of your GitHub repository, then import the repository into Vercel. No build command is required; set the output directory to the repository root (or leave the static default).\n
